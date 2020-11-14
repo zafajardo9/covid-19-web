@@ -1,7 +1,29 @@
-const header = document.querySelector(".header");
+//SCROLLING IN NAVBAR
+const nav = document.querySelector(".nav");
+const div = document.querySelector(".container");
+const sectionOneOptions = {
+
+};
+
+const sectionObserver = new IntersectionObserver(function(entries, sectionObserver) {
+    entries.forEach(entry => {
+        console.log(entry);
+        if(!entry.isIntersecting){
+            nav.classList.remove('nav-scrolled');
+        }else {
+            nav.classList.add('nav-scrolled');
+        }
+    })
+}, sectionOneOptions);
+
+sectionObserver.observe(div);
+
+
+//GSAP
+const headerG = document.querySelector(".header");
 // const video = header.querySelector("video");
 const video = document.getElementById("intro");
-const text = header.querySelector("h1");
+const text = headerG.querySelector("h1");
 
 
 //END
@@ -12,9 +34,9 @@ const controller = new ScrollMagic.Controller();
 
 const scene = new ScrollMagic.Scene({
     duration: 500,
-    triggerElement: header,
+    triggerElement: headerG,
     triggerHook: 0
-}).setPin(header)
+}).setPin(headerG)
 .addTo(controller);
 
 //Vid to animate

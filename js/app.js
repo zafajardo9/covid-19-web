@@ -29,3 +29,10 @@ gsap.from('.hightlightPic', {
     duration: 3
 })
 
+
+
+
+
+
+
+

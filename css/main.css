@@ -47,21 +47,24 @@ body {
     background-color: var(--second-color);
 }
 nav {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    background-color: var(--main-color);
+    background-color: rgba(17, 0, 43, 0.24);
     display: flex;
     justify-content: space-between;
     padding: 10px;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    color: var(--second-color);
+    z-index: 10;
 }
+
 
 nav h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    color: var(--second-color);
 }
 nav ul {
     display: flex;
@@ -73,10 +76,16 @@ nav li {
 }
 
 nav a {
+    text-transform: uppercase;
     text-decoration: none;
     color: var(--second-color);
 }
 
+/* WHEN SCROLLING */
+.nav-scrolled {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
 /* HEADER */
 
 .header {
@@ -94,7 +103,7 @@ nav a {
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: rgba(146, 106, 205, 0.5);
+    background-color: rgba(59, 41, 87, 0.377);
 }
 .overlap {
     position: relative;
