@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Quicksand&family=Raleway:wght@200&display=swap');
+
+:root {
+    --main-color: #926acd;
+    --second-color: #ffe4c1;
+    --idea-color: #585c5a;
+    --idea2-color: #edfded;
+    --Bebas-font: 'Bebas Neue', cursive;
+    --Montserrat-font: 'Montserrat', sans-serif;
+    --Quicksand-font: 'Quicksand', sans-serif;
+    --Raleway-font:'Raleway', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--Montserrat-font);
+    background-color: var(--second-color);
+}
+button:hover {
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+}
+nav a {
+    text-decoration: none;
+    color: var(--second-color);
+    text-align: center;
+}
+.float {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 50px;
+}
+
+/* .floatingContact {
+
+} */
+
+.donateNow {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.dib {
+    height: 100%;
+}
+.contentPic {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentPic img {
+    width: 500px;
+    z-index: 10;
+}
+
+.contentPic::before {
+    content: '';
+    width: 900px;
+    height: 900px;
+    background-image: url(../asset/svg/blob.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1;
+    left: -1;
+    z-index: 5;
+    transform: translateY(-10%);
+}
+.content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--main-color);
+}
+form {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.payment {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    width: 100%;
+}
+.input {
+    cursor: pointer;
+    width: 400px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    outline: 2px solid #f00;
+  }
+
+
+
+  /* COMPONENT */
+  .notifyContainer {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--main-color);
+      color: var(--second-color);
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 20px;
+      position: absolute;
+      bottom: 120%;
+      right: 100%;
+      z-index: 9;
+      transform: scale(0);
+      transform-origin: bottom right;
+      transition: .3s ease-in;
+  }
+
+  .notifyContainer input {
+      width: 100%;
+  }
+
+  .notifyContainer button {
+      background-color: var(--second-color);
+      color: var(--main-color);
+  }

@@ -10,7 +10,7 @@ gsap.from('.preventTips', {
     scrollTrigger: {
         trigger: ".preventTips",
         // start: "top bottom",
-        toggleActions: "restart pause pause reset"
+        toggleActions: "restart pause pause play"
     },
     x: -500,
     duration: 2,
@@ -19,15 +19,58 @@ gsap.from('.preventTips', {
 
 gsap.from('.hightlightPic', {
     scrollTrigger: {
-        trigger: ".preventTips",
-        start: "top top",
-        toggleActions: "restart pause pause reset",
+        trigger: ".hightlightPic",
+        toggleActions: "restart pause restart play",
         // markers: true
     },
     x: -500,
     opacity: 0,
-    duration: 3
+    duration: 2
 })
+
+gsap.from('.firstInfo', {
+    scrollTrigger: {
+        trigger: ".firstInfo",
+        toggleActions: "restart pause pause play",
+        // markers: true
+    },
+    x: -500,
+    opacity: 0,
+    duration: 2
+})
+gsap.from('.secondInfo', {
+    scrollTrigger: {
+        trigger: ".firstInfo",
+        toggleActions: "restart pause pause play",
+        // markers: true
+    },
+    y: 500,
+    opacity: 0,
+    duration: 2
+})
+
+gsap.from('.thirdInfo', {
+    scrollTrigger: {
+        trigger: ".firstInfo",
+        toggleActions: "restart pause pause play",
+        // markers: true
+    },
+    x: 500,
+    opacity: 0,
+    duration: 2
+})
+
+gsap.from('.infoSVG', {
+    scrollTrigger: {
+        trigger: ".firstInfo",
+        toggleActions: "restart pause pause play",
+        // markers: true
+    },
+    y: 500,
+    opacity: 0,
+    duration: 2
+})
+
 
 
 

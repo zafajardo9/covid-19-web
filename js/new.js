@@ -1,10 +1,9 @@
 //SCROLLING IN NAVBAR
+//NUMBER ONE
+/* 
 const nav = document.querySelector(".nav");
 const div = document.querySelector(".container");
-const sectionOneOptions = {
-
-};
-
+const sectionOneOptions = {};
 const sectionObserver = new IntersectionObserver(function(entries, sectionObserver) {
     entries.forEach(entry => {
         console.log(entry);
@@ -16,7 +15,20 @@ const sectionObserver = new IntersectionObserver(function(entries, sectionObserv
     })
 }, sectionOneOptions);
 
-sectionObserver.observe(div);
+sectionObserver.observe(div);*/
+//NUMBER TWO
+window.addEventListener('scroll', function() {
+    let nav = document.querySelector('nav');
+    let windowPosition = window.scrollY > 3;
+    nav.classList.toggle('nav-scrolled', windowPosition);
+})
+
+//DATE THINGS
+const dated = new Date();
+
+const currentYear = "JoemarBuen © " + dated.getFullYear();
+document.getElementById("curDate").innerHTML = currentYear;
+
 
 
 //GSAP
@@ -62,3 +74,4 @@ gsap.to(headerText, {
 //     scrollpos = e.scrollPos;
 //     console.log(scrollPos);
 // })
+

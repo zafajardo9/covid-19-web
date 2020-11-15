@@ -58,12 +58,15 @@ nav {
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     z-index: 10;
+    border-bottom: 1px solid #fff;
+    transition: 0.3s ease-in;
 }
 
 
 nav h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    margin-left: 10px;
     color: var(--second-color);
 }
 nav ul {
@@ -85,6 +88,8 @@ nav a {
 .nav-scrolled {
     background-color: var(--main-color);
     color: var(--second-color);
+    transition: 0.3s ease-in-out;
+    padding: 0px;
 }
 /* HEADER */
 
@@ -287,6 +292,52 @@ nav a {
 
 }
 
+/* InFORMATION */
+
+
+.symptoms {
+    padding: 30px;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+.symptomsInfo {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    color: var(--second-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.infoz {
+    width: 100%;
+    height: 200px;
+    background-color: var(--main-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* TO BE TESTED */
+.tested {
+    padding: 30px;
+}
+.testImg {
+    width: 300px;
+}
+.testDivider {
+    display: flex;
+    flex-direction: column;
+}
 /* FOOTER */
 footer {
     width: 100%;
@@ -296,6 +347,10 @@ footer {
     justify-content: center;
     align-items: center;
     color: var(--second-color);
+}
+.date {
+    display: flex;
+    flex-direction: row;
 }
 
 .vh {
