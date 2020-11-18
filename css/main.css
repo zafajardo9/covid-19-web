@@ -57,7 +57,7 @@ nav {
     padding: 10px;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    z-index: 10;
+    z-index: 20;
     border-bottom: 1px solid #fff;
     transition: 0.3s ease-in;
 }
@@ -112,9 +112,12 @@ nav a {
 }
 .overlap {
     position: relative;
-    z-index: 20;
-
-
+    z-index: 4;
+    position: absolute;
+    font-size: 50px;
+    color: var(--second-color);
+    font-weight: 800;
+    text-align: right;
 }
 .header video {
     position: absolute;
@@ -123,17 +126,9 @@ nav a {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: 5;
+    z-index: 2;
 }
-.headerText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: var(--second-color);
-    font-weight: 800;
-}
+
 /* DIVIDER */
 
 .divider {
@@ -357,4 +352,42 @@ footer {
     height: 100vh;
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    color: var(--main-color);
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 

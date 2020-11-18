@@ -23,10 +23,11 @@
 <!-- HEROOO!!!!! -->
     <div class="header">
 
-        <video loop muted autoplay preload="auto" intro" src="./asset/vid/Fighting COVID-19 in the Philippines_ Contact tracing in communities.mp4"></video>
         <div class="overlap">
-            <h1 class="headerText">Covid Task Force</h1>
+            <h1 class="headerText">Covid Task</h1>
+            <h1 class="headerText">Force</h1>
         </div>
+        <video loop muted autoplay preload="auto" intro" src="./asset/vid/Fighting COVID-19 in the Philippines_ Contact tracing in communities.mp4"></video>
     </div>
 
 
@@ -54,9 +55,19 @@
                     <h1>Subscribe</h1>
                     <p>Subscribe for our Newsletter</p>
                     <p>Be updated!</p>
-                    <input type="email" name="" id="">
-                    <button class="mainBtn">SEND</button>
+                    <input type="email" name="email" id="emailInput">
+                    <button class="mainBtn" id="myBtn">SEND</button>
                 </div>
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Please visit your Email : "</p><p id="emailNews"></p>
+                    </div>
+                  
+                  </div>
         </div>
     </div>
 
@@ -71,7 +82,7 @@
     </div>
 
     <!-- ANOTHER ELEMENT -->
-            <div class="container preventcon">
+            <div class="container preventcon" id="prevent">
                 <div class="prevent">
                     <h1>How to Prevent</h1>
 

@@ -56,22 +56,34 @@ scene.on("enter", function() {
     video.play();
 
 })
-on("leave", function() {
+scene.on("leave", function() {
     video.pause();
 });
 
 // const cards = document.getElementsByClassName("card");
 
-//GSAP
-const headerText = document.getElementsByClassName("headerText")
-gsap.to(headerText, {
-   x: "500%",
-});
-// let accel = 0.1;
-// let scrollpos = 0;
-// let delay = 0;
-// scene.on("update", e => {
-//     scrollpos = e.scrollPos;
-//     console.log(scrollPos);
-// })
 
+
+//POPUP
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+// asdfasdfasdf
+var emailInput = document.getElementById("emailInput");
+var emailNews = document.getElementById("emailNews");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+  emailNews.innerHTML = emailInput;
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
